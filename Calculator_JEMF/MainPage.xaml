@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator_JEMF.MainPage">
+
+    <StackLayout BackgroundColor="#171423">
+        <Frame BackgroundColor="#100E18" Padding="20" CornerRadius="0">
+            <Label Text="Calculadora" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Grid RowSpacing="10" ColumnSpacing="10" Padding="20" VerticalOptions="EndAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ScrollView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Padding="20, 0, 20, 0">
+                <Label x:Name="PreView" Style="{StaticResource LabelResult}" Text="0" HorizontalTextAlignment="End" VerticalOptions="EndAndExpand" />
+            </ScrollView>
+            <Frame Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" BackgroundColor="#100E18" BorderColor="#3513AF" VerticalOptions="EndAndExpand" CornerRadius="50" >
+                <ScrollView>
+                    <Label x:Name="CurrentNumber" Style="{StaticResource LabelResult}" HorizontalTextAlignment="End" Text="0" />
+                </ScrollView>
+            </Frame>
+
+            <Button Style="{StaticResource ButtonCustom}" Text="AC" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
+            <ImageButton Style="{StaticResource ImgButtonCustom}" Source="BackspaceIcon" Grid.Column="2" Grid.Row="2"/>
+            <ImageButton Style="{StaticResource ImgButtonCustom}" Source="PlusIcon" Grid.Column="3" Grid.Row="2"/>
+            <!-- 
+            <Button Style="{StaticResource ButtonCustom}" Text="C" Grid.Column="2" Grid.Row="2"/>
+            <Button Style="{StaticResource ButtonCustom}" Text="+" Grid.Column="3" Grid.Row="2"/>
+            -->
+
+            <Button Style="{StaticResource ButtonCustom}" Text="7" Grid.Column="0" Grid.Row="3"/>
+            <Button Style="{StaticResource ButtonCustom}" Text="8" Grid.Column="1" Grid.Row="3"/>
+            <Button Style="{StaticResource ButtonCustom}" Text="9" Grid.Column="2" Grid.Row="3"/>
+            <ImageButton Style="{StaticResource ImgButtonCustom}" Source="MinusIcon" Grid.Column="3" Grid.Row="3"/>
+            <!-- 
+            <Button Style="{StaticResource ButtonCustom}" Text="-" Grid.Column="3" Grid.Row="3"/>
+            -->
+
+            <Button Style="{StaticResource ButtonCustom}" Text="4" Grid.Column="0" Grid.Row="4"/>
+            <Button Style="{StaticResource ButtonCustom}" Text="5" Grid.Column="1" Grid.Row="4"/>
+            <Button Style="{StaticResource ButtonCustom}" Text="6" Grid.Column="2" Grid.Row="4"/>
+            <ImageButton Style="{StaticResource ImgButtonCustom}" Source="XIcon" Grid.Column="3" Grid.Row="4"/>
+            <!-- 
+            <Button Style="{StaticResource ButtonCustom}" Text="x" Grid.Column="3" Grid.Row="4"/>
+            -->
+
+            <Button Style="{StaticResource ButtonCustom}" Text="1" Grid.Column="0" Grid.Row="5"/>
+            <Button Style="{StaticResource ButtonCustom}" Text="2" Grid.Column="1" Grid.Row="5"/>
+            <Button Style="{StaticResource ButtonCustom}" Text="3" Grid.Column="2" Grid.Row="5"/>
+            <!-- 
+            <Button Style="{StaticResource ButtonCustom}" Text="/" Grid.Column="3" Grid.Row="5"/> 
+            -->
+            <ImageButton Source="divisionIcon" Grid.Column="3" Grid.Row="5" Style="{StaticResource ImgButtonCustom}" />
+
+            <Button Style="{StaticResource ButtonCustom}" Text="0" Grid.Column="0" Grid.Row="6"/>
+            <Button Style="{StaticResource ButtonCustom}" Text="." Grid.Column="1" Grid.Row="6"/>
+            <ImageButton Style="{StaticResource ImgButtonCustom}" Source="EqualsIcon" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2"/>
+            <!-- 
+            <Button Style="{StaticResource ButtonCustom}" Text="=" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2"/>
+            -->
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
